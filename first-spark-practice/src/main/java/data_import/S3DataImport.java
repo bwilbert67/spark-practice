@@ -76,6 +76,7 @@ public class S3DataImport implements CloudDataImporter{
         while ((line = reader.readLine()) != null) {
             stringBuilder.append(line);
             stringBuilder.append("\n");
+            System.out.println(line);
         }
         String data = stringBuilder.toString();
         CSVReader csvReader = new CSVReader(new StringReader(data));
